@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  border: 2px solid gray;
+  border-radius: 20px;
+  padding: 2rem;
+}
+.message {
+  padding: 0.5rem;
+  background-color: #766ac8;
+  border-radius: 10px;
+}
