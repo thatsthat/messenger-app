@@ -1,3 +1,13 @@
 .main {
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.button {
+  margin-left: 1rem;
+}
+
+.textBox {
+  flex-grow: 2;
 }

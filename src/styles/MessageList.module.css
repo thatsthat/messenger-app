@@ -12,3 +12,7 @@
   background-color: #766ac8;
   border-radius: 10px;
 }
+
+.dialog {
+  align-self: normal;
+}

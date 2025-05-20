@@ -3,13 +3,14 @@ import styles from "../styles/MessageList.module.css";
 import InputDialog from "./InputDialog";
 
 type AppProps = {
-  initialMessages: string[];
+  initialMessages: { content: string; subject: string }[];
 };
 
 function MessageList({ initialMessages }: AppProps) {
-  const [messages, setMessages] = useState<string[]>(initialMessages);
+  const [messages, setMessages] =
+    useState<{ content: string; subject: string }[]>(initialMessages);
 
-  const addMessage = (message: string) => {
+  const addMessage = (message: { content: string; subject: string }) => {
     setMessages([...messages, message]);
   };
 
@@ -18,10 +19,12 @@ function MessageList({ initialMessages }: AppProps) {
       {messages &&
         messages.map((message, i) => (
           <div key={i} className={styles.message}>
-            {message}
+            {message.content}
           </div>
         ))}
-      <InputDialog sendMessage={addMessage} />
+      <div className={styles.dialog}>
+        <InputDialog sendMessage={addMessage} />
+      </div>
     </div>
   );
 }
