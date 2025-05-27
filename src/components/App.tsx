@@ -1,19 +1,24 @@
 import styles from "../styles/App.module.css";
-import MessageList from "./MessageList";
+import { BrowserRouter, Routes, Route } from "react-router";
+import NavBar from "./NavBar";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import MainPage from "./MainPage";
 
 function App() {
-  const messages = [
-    { content: "How are you?", subject: "rx" },
-    { content: "What are you doing?", subject: "rx" },
-    { content: "What kind of code?", subject: "rx" },
-    { content: "That's interesting", subject: "rx" },
-    { content: "I'm fine thanks", subject: "tx" },
-    { content: "I'm writing some code", subject: "tx" },
-    { content: "A messenger App", subject: "tx" },
-    { content: "I think so too", subject: "tx" },
-  ];
-
-  return <MessageList initialMessages={messages} />;
+  return (
+    <div className={styles.main}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NavBar />}>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

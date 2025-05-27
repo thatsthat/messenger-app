@@ -6,11 +6,20 @@
   border: 2px solid gray;
   border-radius: 20px;
   padding: 2rem;
+  margin-bottom: 3rem;
 }
 .message {
   padding: 0.5rem;
-  background-color: #766ac8;
   border-radius: 10px;
+}
+
+.rx {
+  background-color: #766ac8;
+}
+
+.tx {
+  background-color: pink;
+  align-self: flex-start;
 }
 
 .dialog {

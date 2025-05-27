@@ -1,0 +1,67 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+.main {
+  padding: 0rem;
+  margin: 0;
+  display: flex;
+  height: 100%;
+}
+
+.sideBar {
+  border-right: 2px solid grey;
+  padding: 1rem;
+  flex: 1;
+  align-items: center;
+}
+.content {
+  flex: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.file {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  background-color: black;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 1rem;
+}
+
+.folder {
+  margin-top: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: white;
+}
+
+.folderName {
+  margin-top: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  margin-right: 1rem;
+  vertical-align: bottom;
+}
